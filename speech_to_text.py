@@ -1,6 +1,6 @@
 from faster_whisper import WhisperModel
 
-# Load the model (adjust size based on accuracy/speed)
+# Size here can always be adjusted acc. to requirement
 model = WhisperModel("small")
 
 def transcribe_audio(audio_file):
@@ -11,7 +11,7 @@ def transcribe_audio(audio_file):
     transcript = " ".join(segment.text for segment in segments)
     return transcript
 
-# Example usage
+
 if __name__ == "__main__":
     audio_path = input("Enter the full path of the audio file: ").strip()
 
